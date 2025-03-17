@@ -1,0 +1,260 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+
+
+
+/*----------BODY / TRANS -----------*/
+
+body{
+  background: url(../src/assets/img/pexels-pixabay-258136.jpg) no-repeat fixed center  ;
+  background-size: cover ;
+  color:#ECF8FE;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px;
+  padding: 10px;
+}
+
+.trans{
+  padding: 10px;
+  background: hsla(198, 90%, 8%, 0.8);
+  border-radius: 15px;
+}
+
+
+/*---------- NAVBAR----------- */
+
+nav{
+  width: 60%;
+  /* height: 0px; */
+  background: hsla(198, 90%, 8%, 0.8);;
+  border-radius: 40px;
+  margin: 30px auto;
+}
+
+nav .elementoNav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+}
+
+nav .elementoNav a{
+  padding: 15px 0px;
+  text-decoration: none;
+  color: #EDFDFB;
+  position: relative;
+  
+
+}
+
+nav .elementoNav a::before{
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #ECF8FE;
+  bottom: 10px;
+  position: absolute;
+  transition: all .3s;
+} 
+
+nav .elementoNav a:hover::before{
+  width: 70%;
+} 
+
+/*---- IMAGEN Y NOMBRE -----*/
+
+.header-img{
+  display: flex;
+  flex-direction: row;
+  Justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: rgba(41, 15, 5, 0.3);
+  background-repeat:  no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  
+}
+
+
+.header-img .perfil-img{
+  max-width: 20%;
+}
+
+.header-img .perfil-img img{
+  width: 100%;
+  border-radius: 50%;
+  
+}
+
+.header-img .letrero{
+  font-size: 2vmin;
+  margin: 25px;
+}
+
+
+
+/*------------------------*/
+.perfil{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.perfil .texto{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+/*------------------------*/
+.conocimientos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  /* align-items: center; */
+}
+
+/* Conocimientos y tecnologias  */
+
+/* .conocimientos .tecnologias{
+
+} */
+
+.conocimientos .tecnologias ul{ 
+
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.conocimientos .tecnologias ul li{
+  background-color: #075D88;
+  padding: 1rem;
+  list-style-type: none;
+  text-decoration: none;
+  /* margin: 50px; */
+  text-align: center;
+  border-radius: 5px; 
+}
+
+/* .conocimientos .tecnologias ul li .logo-tech{
+
+} */
+
+
+.matriz{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.caja{
+  width:  100px;
+  height: 100px;
+  background: #075D88;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* position: relative; */
+}
+
+
+@media screen and (max-width: 550px) {
+
+  .element-nav{
+      display: none;
+  }
+
+  .header-img{
+      font-size: 2vmin;
+  }
+
+  .header-img .letrero{
+      font-size: 3vmin;
+      margin: 10px;
+      text-align: center;
+  }
+}
+
+/*--------------Section Informacion---------------*/
+
+.contacto{
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto .info-contacto{
+  padding: 2rem;
+  background: #03283A;
+  width: 90%;
+  gap: 2rem;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.contacto .formulario{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+
+.contacto .formulario div form{
+  
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.contacto .formulario div form div label{
+  
+}
+
+.contacto .formulario div form div input{
+
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.contacto .formulario div form div textarea{
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+}
