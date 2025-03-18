@@ -1,10 +1,11 @@
+
+
+
 *{
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
 }
-
-
 
 
 /*----------BODY / TRANS -----------*/
@@ -68,6 +69,10 @@ nav .elementoNav a:hover::before{
   width: 70%;
 } 
 
+nav .elementoNav a i{
+  margin-right: 10px;
+}
+
 /*---- IMAGEN Y NOMBRE -----*/
 
 .header-img{
@@ -84,7 +89,6 @@ nav .elementoNav a:hover::before{
   border-radius: 10px;
   padding: 1rem;
   margin: 1rem;
-  
 }
 
 
@@ -128,14 +132,9 @@ nav .elementoNav a:hover::before{
   /* align-items: center; */
 }
 
-/* Conocimientos y tecnologias  */
-
-/* .conocimientos .tecnologias{
-
-} */
+/* --------------------- CONOCIMIENTOS Y TECNOLOGIAS ------------------------ */
 
 .conocimientos .tecnologias ul{ 
-
   display: flex;
   flex-direction: row; 
   flex-wrap: wrap;
@@ -155,9 +154,7 @@ nav .elementoNav a:hover::before{
   border-radius: 5px; 
 }
 
-/* .conocimientos .tecnologias ul li .logo-tech{
-
-} */
+/* .conocimientos .tecnologias ul li .logo-tech{ } */
 
 
 .matriz{
@@ -182,24 +179,7 @@ nav .elementoNav a:hover::before{
 }
 
 
-@media screen and (max-width: 550px) {
-
-  .element-nav{
-      display: none;
-  }
-
-  .header-img{
-      font-size: 2vmin;
-  }
-
-  .header-img .letrero{
-      font-size: 3vmin;
-      margin: 10px;
-      text-align: center;
-  }
-}
-
-/*--------------Section Informacion---------------*/
+/*------------------ INFORMACIÓN DE CONTACTO Y ENVIO ---------------------*/
 
 .contacto{
   border-radius: 10px;
@@ -258,3 +238,27 @@ nav .elementoNav a:hover::before{
   border: none;
   border-radius: 5px;
 }
+
+/*-------------------- MODIFICACIONES RESPONSIVE ----------------------*/
+
+@media screen and (max-width: 550px) {
+
+  .element-nav{
+    display: none;
+  }
+
+  .header-img{
+    font-size: 2vmin;
+  }
+
+  .header-img .letrero{
+    font-size: 3vmin;
+    margin: 10px;
+    text-align: center;
+  }
+}
+
+
+
+
+
