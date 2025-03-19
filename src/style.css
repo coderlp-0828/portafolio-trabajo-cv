@@ -5,6 +5,8 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  color:#ECF8FE;
+  font-family: "Roboto Mono", monospace;
 }
 
 
@@ -12,18 +14,16 @@
 
 body{
   background: url(../src/assets/img/pexels-pixabay-258136.jpg) no-repeat fixed center  ;
-  background-size: cover ;
-  color:#ECF8FE;
-  font-family: "Roboto Mono", monospace;
+  background-size: cover;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   margin: 10px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .trans{
-  padding: 10px;
+  padding: 15px;
   background: hsla(198, 90%, 8%, 0.8);
   border-radius: 15px;
 }
@@ -49,7 +49,7 @@ nav .elementoNav{
 nav .elementoNav a{
   padding: 15px 0px;
   text-decoration: none;
-  color: #EDFDFB;
+  color: #ECF8FE;;
   position: relative;
   
 
@@ -240,24 +240,86 @@ nav .elementoNav a i{
 }
 
 /*-------------------- MODIFICACIONES RESPONSIVE ----------------------*/
+@media screen and (max-width: 1024px){
+  /* .header-img .letrero{
+    font-size: 3vmin;
+    margin: 10px;
+    text-align: center;
+  } */
+  
+}
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 890px){
+  nav .elementoNav a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  .element-nav{
+  }
+  
+  nav .elementoNav a span{
+    padding-top: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+
+  nav .elementoNav a{
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+  } 
+  nav .elementoNav a span{
     display: none;
   }
+
+  nav .elementoNav a i{
+    margin: 0;
+    padding: 5px;
+    border-radius: 20%;
+    transition: all .3s;
+  } 
+  
+
+   nav .elementoNav a i:hover{
+    background: #ECF8FE;
+    color:#075D88;
+    border-radius: 50%;
+    
+  } 
+
+
+
+  /* nav .elementoNav a::before{
+  
+  } */
+  nav .elementoNav a:hover::before{
+    width: 0;
+    display: none;
+  } 
 
   .header-img{
     font-size: 2vmin;
   }
 
-  .header-img .letrero{
+  /* .header-img .letrero{
     font-size: 3vmin;
     margin: 10px;
     text-align: center;
-  }
+  } */
 }
 
+
+@media screen and (max-width: 425px){
+  nav .elementoNav a i{
+      display:none;
+  }
+}
 
 
 
