@@ -42,6 +42,7 @@ body{
   background: hsla(198, 90%, 8%, 0.8);
   border-radius: 40px;
   margin: 30px auto;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .nav .cerrar-menu{
@@ -210,6 +211,7 @@ body{
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   
 }
 
