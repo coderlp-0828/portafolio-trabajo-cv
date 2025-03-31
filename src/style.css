@@ -28,34 +28,42 @@ body{
   border-radius: 15px;
 }
 
+/*-----------Hamburguesa-------*/
 
-/*---------- NAVBAR----------- */
+.hamburguesa{
+  display: none;
+}
 
-nav{
+
+/*---------- NAVBAR ----------- */
+
+.nav{
   width: 60%;
-  /* height: 0px; */
-  background: hsla(198, 90%, 8%, 0.8);;
+  background: hsla(198, 90%, 8%, 0.8);
   border-radius: 40px;
   margin: 30px auto;
 }
 
-nav .elementoNav{
+.nav .cerrar-menu{
+  display: none;
+}
+
+.nav .elementoNav{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content:space-around;
 }
 
-nav .elementoNav a{
+.nav .elementoNav a{
   padding: 15px 0px;
   text-decoration: none;
   color: #ECF8FE;;
   position: relative;
-  
-
+  transition: all .5;
 }
 
-nav .elementoNav a::before{
+.nav .elementoNav a::before{
   content: '';
   width: 0;
   height: 2px;
@@ -65,12 +73,16 @@ nav .elementoNav a::before{
   transition: all .3s;
 } 
 
-nav .elementoNav a:hover::before{
+.nav .elementoNav a:hover::before{
   width: 70%;
 } 
 
-nav .elementoNav a i{
+.nav .elementoNav a i{
   margin-right: 10px;
+}
+
+.nav .elementoNav .responsive{
+  display: none;
 }
 
 /*---- IMAGEN Y NOMBRE -----*/
@@ -81,7 +93,9 @@ nav .elementoNav a i{
   Justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background: rgba(41, 15, 5, 0.3);
+  background: rgba(7, 93, 136, 0.2);
+
+
   background-repeat:  no-repeat;
   background-position: center;
   background-size: cover;
@@ -89,6 +103,8 @@ nav .elementoNav a i{
   border-radius: 10px;
   padding: 1rem;
   margin: 1rem;
+
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -152,6 +168,7 @@ nav .elementoNav a i{
   /* margin: 50px; */
   text-align: center;
   border-radius: 5px; 
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* .conocimientos .tecnologias ul li .logo-tech{ } */
@@ -176,6 +193,41 @@ nav .elementoNav a i{
   align-items: center;
   
   /* position: relative; */
+}
+
+
+
+/*-------------------------------CARD DE PROYECTOS ------------------------*/
+
+
+.card__project{
+  width: 350px;
+  margin:10px;
+  padding: 10px;
+  border: 2px solid steelblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.img__card{
+  width: 100px;
+  height: 100px;
+
+}
+.img__card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.text__card{
+  width: 200px;
+  margin-left: 20px;
 }
 
 
@@ -239,7 +291,17 @@ nav .elementoNav a i{
   border-radius: 5px;
 }
 
-/*-------------------- MODIFICACIONES RESPONSIVE ----------------------*/
+.contacto .formulario div button{
+  background: #075D88;
+  width:100px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+/*------------ MODIFICACIONES RESPONSIVE ----------------------*/
+
 @media screen and (max-width: 1024px){
   /* .header-img .letrero{
     font-size: 3vmin;
@@ -286,7 +348,7 @@ nav .elementoNav a i{
   } 
   
 
-   nav .elementoNav a i:hover{
+  nav .elementoNav a i:hover{
     background: #ECF8FE;
     color:#075D88;
     border-radius: 50%;
@@ -316,9 +378,84 @@ nav .elementoNav a i{
 
 
 @media screen and (max-width: 425px){
-  nav .elementoNav a i{
-      display:none;
+
+  .nav{
+    opacity: 0; 
+    visibility: hidden;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 2px;
+    border-radius: 10px 0 0 10px;
   }
+
+  /*-------*/
+
+  .nav.visible{
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s;
+  }
+
+  /*--------*/
+  .nav .cerrar-menu{
+    display: block;
+    background: none;
+    border: 0;
+    padding: 10px;
+
+  }
+
+
+  .nav .cerrar-menu i{
+    border-radius: 60%;
+    transition: all .5s;
+    padding: 5px;
+    margin: 5px;
+  }
+  .nav .cerrar-menu i:hover{
+    cursor: pointer;
+    background: #ECF8FE;
+    color: #03283A;
+  }
+
+  .nav .elementoNav{
+    flex-direction: column;
+  }
+
+  .hamburguesa{
+    width: 30%;
+    background: hsla(198, 90%, 8%, 0.8);
+    border-radius: 40px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+  }
+
+  .hamburguesa .abrir-menu{
+    padding: 15px ;
+    background: none;
+    border: 0px;
+  }
+
+  .hamburguesa .abrir-menu i{
+    padding: 15px ;
+    margin: 5px;
+    border-radius: 50%;
+    transition: all .5s;
+  }
+
+  .hamburguesa .abrir-menu i:hover{
+    background: #ECF8FE;
+    color:#075D88;
+    border-radius: 50%;
+  }
+
 }
 
 
