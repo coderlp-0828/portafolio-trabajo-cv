@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="es">
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,59 +9,126 @@
 	<!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
     <script src="https://kit.fontawesome.com/8ab33ccfda.js" crossorigin="anonymous"></script>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-  </head>
-  <body>
+</head>
+<body>
     <div class="hamburguesa">
         <button class="abrir-menu" id="abrir"><i class="fa-solid fa-bars"></i></button>
     </div>
     <nav class="nav" id="nav">
         <button class="cerrar-menu" id="cerrar"><i class="fa-solid fa-xmark"></i></button>
         <div class="elementoNav">
-            <a  class="general" href="#perfil"><i class="fa-regular fa-user"></i><span>Acerca de mi</span></a>
-            <a  class="general" href="#conocimientos"><i class="fa-solid fa-atom"></i><span>Conocimientos</span></a>
-            <a  class="general" href="#proyectos"><i class="fa-solid fa-code"></i><span>Proyectos</span></a>
-            <a  class="general" href="#contacto"><i class="fa-solid fa-location-crosshairs"></i><span>Contacto</span></a>
+            <a  class="general" href="#perfil"><div><i class="fa-solid fa-user"></i></div></i><span>Acerca de mi</span></a>
+            <a  class="general" href="#experiencia"><div><i class="fa-solid fa-book-open"></i></div><span>Experiencia</span></a>
+            <a  class="general" href="#conocimientos"><div><i class="fa-solid fa-atom"></i></div><span>Conocimientos</span></a>
+            <a  class="general" href="#proyectos"><div><i class="fa-solid fa-code"></i></div><span>Proyectos</span></a>
+            <a  class="general" href="#contacto"><div><i class="fa-solid fa-location-crosshairs"></i></div><span>Contacto</span></a>
         </div >
     </nav>
     <div class="trans">
-        <div class="header-img">
-            <div class="perfil-img">
-                <img src="./src/assets/img/imgen-redortada-1.png" alt="">
+
+        <div  class="perfil-icono">
+            <div>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <p>Acerca de mi</p>
+        </div>
+
+        <div class="perfil" id="perfil">
+            <div class="perfil-info">
+                
+                <div class="perfil-img">
+                    <img src="./src/assets/img/imgen-redortada-1.png" alt="">
+                </div>
+
+                <div class="perfil-contenedor">
+                    <div class = "perfil-letrero">
+                        <h1>Diego García</h1>
+                        <h2>Desarrollador Web</h2>
+                        <h2>front-end</h2>
+                        <hr>
+                    </div>
+
+                    <div class="perfil-texto">
+                        <br>
+                        <h3>Hola!!</h3>
+                        <br>
+                        <p>Llevo mas de 5 años involucrado en del area del soporte y la programación relacionada al desarrollo web. Me apasiona el estudio por la tecnología, manteniendo constantemente el crecimiento profesional y personal.</p>
+                        <br>
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+        <section class="experiencia" id="experiencia">
+            
+            <div  class="perfil-icono">
+                <div>
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <p>Experiencia</p>
             </div>
             
-            <div class = "letrero">
-                <h1>Diego Garcia</h1>
-                <h2>Desarrollador Web</h2>
-            </div>
-        </div>
-      
-        <section class="perfil" id="perfil">
-            <div class="texto">
-                <div>
-                    <hr>
+            <div class="experiencia-contenido">
+                
+                <div class="listas">
+                    <div class="lista-experiencia">
+                        <h3>Desarrollo de software</h3>
+                        <br>
+                        <ul>
+                            <li>
+                                Maquetado en paginas web  
+                            </li>
+                            <li>
+                                Desarrollo de Aplicaciones Web 
+                            </li>
+                            <li>
+                                Mantenimiento de software y aplicaciones  
+                            </li>
+                        </ul>
+                    </div>
                     <br>
-                    <h3>Hola!!</h3>
-                    <br>
-                    <p>Llevo mas de 5 años involucrado en del area del soporte y la programación relacionada al desarrollo web. Me apasiona el estudio por la tecnología, manteniendo constantemente el crecimiento profesional y personal.</p>
-                    <br>
+                    <div class="lista-experiencia-2">
+                        <h3>Soporte</h3>
+                        <br>
+                        <ul>
+                            <li>
+                                Mesa de ayuda (Help desk) - Primer nivel   
+                            </li>
+                            <li>
+                                Soporte Tecnico  
+                            </li>
+                            <li>
+                                Ingeniero de Servicio 
+                            </li>
+                            <li>
+                                Analista de Procesos BPMN jr 
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <hr>
+
+                <div class="estudios">
+                    <h3>Estudios</h3>
                     <br>
-                    <h3>Experiencia</h3>
+                    <p>Escuela Superior de Ingeniería Mecánica  y Eléctrica<span>(ESIME)</span> - Unidad Zacatenco </p>
+                    <!-- <P></P> -->
                     <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum quibusdam optio eaque placeat deserunt nemo distinctio, voluptatem id cupiditate beatae magnam porro doloribus minus est? Fugit, voluptates porro? Sunt, atque.</p>
+                    <p>Ingeniería en Comunicaciones y Electroncia</p>
                     <br>
+                    <p>Especialidad: Computacion</p>
                 </div>
             </div>
+            
         </section>
-      
         <section class="conocimientos" id="conocimientos">
-            <div>
-                <hr>
-                <br>
-                <h3>Conocimientos y Tecnologias</h3>
+
+            <div  class="perfil-icono">
+                <div>
+                    <i class="fa-solid fa-atom"></i>
+                </div>
+                <p>Conocimientos</p>
             </div>
+
             <div class="tecnologias">
                 <ul>
                     <li>
@@ -92,7 +159,7 @@
                     </li>
                     <li>
                         <div class="logo-tech">
-                            <i class="fa-brands fa-square-js"></i>
+                            <i class="fa-brands fa-js"></i>
                         </div>
                         <p>JavaScript</p>
                     </li>
@@ -131,7 +198,7 @@
                         <div class="logo-tech">
                             <i class="fa-brands fa-linux"></i>
                         </div>
-                        <p>Administración Linux</p>
+                        <p>Linux Admin.</p>
                     </li>
                     <li>
                         <div class="logo-tech">
@@ -169,7 +236,7 @@
                     </li>
                 </ul>
             </div>
-                <div class="diplomas">
+                <!-- <div class="diplomas">
                     <div>
                         <hr>
                         <br>
@@ -185,14 +252,17 @@
                         <div class="caja">caja</div>
                         <div class="caja">caja</div>
                     </div>
-                </div>
+                </div> -->
         </section>
         <section class="proyectos" id="proyectos">
-            <div>
-                <hr>
-                <br>
-                <h3>Proyectos</h3>
+
+             <div class="perfil-icono">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <p>Proyectos</p>
             </div>
+
             <div class="matriz">
                 <div class="card__project">
                     <div class="img__card">
@@ -275,49 +345,75 @@
         </section>
         <section class="contacto" id="contacto">
             
-            <div class="info-contacto">
-                <h3>INFORMACION DE CONTACTO</h3>
-                <p><span class="fas fa-location-dot"></span> ciudad  de Mexico</p>
-                <p><span class="fas fa-phone"></span> 52+ 55 6527 9080</p>
-                <p><span class="fas fa-envelope"></span> diego.garcia.280892@gmail.com</p>
-            </div>
-            <div class="formulario">
-                <h3>Enviame un correo o mensaje</h3>
-
+            <div  class="perfil-icono">
                 <div>
-                    <form id="myForm">
-                        <div>
-                            <label for="nombre">Nombre:</label><br>
-                            <input type="text" id="nombre" name="nombre">
-                        </div>
-                        <div>
-                            <label for="apellido">Apellido:</label><br>
-                            <input type="text" id="apellido" name="apellido">
-                        </div>
-                        <div>
-                            <label for="email">Email:</label><br>
-                            <input type="email" id="email" name="email">
-                        </div>
-                        <div>
-                            <label for="telefono">Teléfono:</label><br>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Ej: +1-555-123-4567">
-                        </div>
-                        
-                        <div>
-                            <label for="mensaje">mensaje:</label><br>
-                            <textarea required></textarea>
-                        </div>
-                        
-                        <div>
-                            <button type="submit">Enviar</button>
-                        </div>
-                    </form>
-                </div>    
-
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                </div>
+                <p>Contacto </p>
             </div>
+
+            <div class="info-contacto">
+
+                <div class="ciudad-movil">
+                    <div class="icon-contacto">
+                        <span class="fas fa-location-dot"></span>
+                    </div>
+                    <h3>Ciudad de Mexico</h3>
+                    <hr>
+                    <div class="icon-contacto">
+                        <span class="fa-solid fa-mobile"></span>
+                    </div>
+                    
+                    <h3>Enviame un mensaje: </h3>
+                    <div class="whats-tele">
+                        <div class="icon-contacto">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        
+                        <div class="icon-contacto">
+                            <i class="fa-brands fa-telegram"></i>
+                        </div>
+                            
+                    </div>
+                    <hr>
+                </div>
+                
+                <form class="myForm" id="myForm">
+
+                    <div class="icon-email"><span class="fas fa-envelope"></span></div>
+
+                    <h3 class="correo-titulo">Ó enviame un correo: </h3>
+
+                    <div class="nombre">
+                        <label for="nombre">Nombre:</label><br>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="apellido">
+                        <label for="apellido">Apellido:</label><br>
+                        <input type="text" id="apellido" name="apellido">
+                    </div>
+                    <div class="email">
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="telefono">
+                        <label for="telefono">Teléfono:</label><br>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: +1-555-123-4567">
+                    </div>
+                    
+                    <div class="mensaje">
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea required></textarea>
+                    </div>
+                    
+                    <div class="boton">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            
         </section>
     </div>
-    
     <script type="module" src="./src/main.js"></script>
 </body>
 </html>

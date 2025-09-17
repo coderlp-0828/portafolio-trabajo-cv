@@ -22,12 +22,6 @@ body{
   padding: 15px;
 }
 
-.trans{
-  padding: 15px;
-  background: hsla(198, 90%, 8%, 0.8);
-  border-radius: 15px;
-}
-
 /*-----------Hamburguesa-------*/
 
 .hamburguesa{
@@ -35,13 +29,14 @@ body{
 }
 
 
-/*---------- NAVBAR ----------- */
+/**---------- NAVBAR ----------- **/
 
 .nav{
   width: 60%;
   background: hsla(198, 90%, 8%, 0.8);
   border-radius: 40px;
   margin: 30px auto;
+  padding: 10px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -62,6 +57,11 @@ body{
   color: #ECF8FE;;
   position: relative;
   transition: all .5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s;
 }
 
 .nav .elementoNav a::before{
@@ -78,78 +78,228 @@ body{
   width: 70%;
 } 
 
-.nav .elementoNav a i{
-  margin-right: 10px;
+.nav .elementoNav a div{
+  width: 30px;
+  height: 30px;
+  background: #ECF8FE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 5px;
 }
+
+.nav .elementoNav a div i{
+  color: #075D88;
+  /* aspect-ratio: 1/1;
+  object-fit: contain; */
+}
+
+/* .nav .elementoNav a span{
+
+} */
+
+/* .nav .elementoNav a i{
+  margin-right: 10px;
+} */
 
 .nav .elementoNav .responsive{
   display: none;
 }
 
-/*---- IMAGEN Y NOMBRE -----*/
 
-.header-img{
+/** TRANS **/
+
+.trans{
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 20px;
+  background: hsla(198, 90%, 8%, 0.8);
+  border-radius: 15px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/**---- PERFIL =>  ( IMAGEN / NOMBRE / PROFESION / INTRO ) -----**/
+
+.perfil{
+  display: flex;
+  flex-direction: column;
   Justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   background: rgba(7, 93, 136, 0.2);
 
-
-  background-repeat:  no-repeat;
+  /* background-repeat:  no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 
   border-radius: 10px;
-  padding: 1rem;
+  padding: 20px;
   margin: 1rem;
 
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
+/** GENERICOS => (ICONOS )**/
 
-.header-img .perfil-img{
-  max-width: 20%;
+.perfil-icono {
+  /* background: #000; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0px 20px 20px 20px;
+  border: 1px  solid #fff;
+  text-align: center;
+  border-radius: 10px;
 }
 
-.header-img .perfil-img img{
-  width: 100%;
+.perfil-icono:nth-child(){
+  background: #000;
+  padding: 20px;
+} 
+
+.perfil-icono div{
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
   border-radius: 50%;
+}
+
+.perfil-icono div i{
+  color:#075D88;
+}
+
+.perfil-icono p{
+  font-size: 18px;
+}
+
+/** ---- INFORMACION PERFIL ----**/
+
+.perfil-info{
+  width:100% ;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
   
 }
 
-.header-img .letrero{
-  font-size: 2vmin;
-  margin: 25px;
-}
 
-
-
-/*------------------------*/
-.perfil{
+.perfil .perfil-info .perfil-img{
+  /* background: #5a1616; */
+  width:40% ;
   display: flex;
-  flex-wrap: wrap;
-
-}
-
-.perfil .texto{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: center; 
+  padding: 0 10px;
+  margin: 0 5px;
 }
-/*------------------------*/
-.conocimientos{
+
+.perfil .perfil-info .perfil-img img{
+  width: 80%;
+  border-radius:50%;
+}
+
+.perfil .perfil-info .perfil-contenedor{
+  width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
   /* align-items: center; */
 }
 
-/* --------------------- CONOCIMIENTOS Y TECNOLOGIAS ------------------------ */
+.perfil .perfil-info .perfil-contenedor{
+  padding: 0 10px;
+  margin: 0 5px;
+
+}
+.perfil .perfil-info .perfil-contenedor .perfil-letrero h1{
+  font-size: 32px;
+  font-weight: 600;
+  margin:0;
+}
+
+.perfil .perfil-info .perfil-contenedor .perfil-letrero h2{
+  font-size: 16px;
+  margin: 10px 0px;
+}
+
+.perfil .perfil-info .perfil-contenedor .perfil-letrero hr{
+  margin: 10px 0px;
+  width: 70%;
+}
+
+.perfil .perfil-info .perfil-contenedor .perfil-texto h3{
+  font-size: 14px;
+}
+
+.perfil .perfil-info .perfil-contenedor .perfil-texto p{
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+/**---- EXPERIENCIA  ----**/
+
+
+.experiencia{
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.experiencia-contenido{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.experiencia-contenido .listas{
+  width: 40%;
+
+}
+
+.experiencia-contenido .listas .lista-experiencia-2 h3{
+  margin:10px 0;
+}
+
+.experiencia-contenido .listas .lista-experiencia h3{
+  margin-bottom:10px;
+}
+.experiencia-contenido .estudios{
+  width: 30%;
+}
+
+
+/**---- CONOCIMIENTOS  ----**/
+
+.conocimientos{
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
 
 .conocimientos .tecnologias ul{ 
   display: flex;
@@ -158,21 +308,52 @@ body{
   gap: 2rem;
   justify-content: center;
   align-items: center;
-
 }
 
 .conocimientos .tecnologias ul li{
-  background-color: #075D88;
-  padding: 1rem;
+
+  width: 120px;
+  height: 120px;
+  background-color:  #075D88;
+  /* padding: 1rem; */
   list-style-type: none;
   text-decoration: none;
   /* margin: 50px; */
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  /* text-align: center; */
   border-radius: 5px; 
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* .conocimientos .tecnologias ul li .logo-tech{ } */
+
+.conocimientos .tecnologias ul li .logo-tech{
+  /* background: #075D88; */
+  /* width: 100%;
+  height: 80px;
+  padding: 5px;
+  margin: 5px; */
+  
+  /* position: relative; */
+  
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+
+
+} 
+
+.conocimientos .tecnologias ul li .logo-tech i {
+  /* position: absolute;
+  top:50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  font-size: 30px;
+}
 
 
 .matriz{
@@ -193,19 +374,28 @@ body{
   justify-content: center;
   align-items: center;
   
-  /* position: relative; */
+  /** position: relative; **/
 }
 
+/**-- PROYECTOS --**/
 
+.proyectos{
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-/*-------------------------------CARD DE PROYECTOS ------------------------*/
-
+}
 
 .card__project{
+  background: rgba(0, 30, 49, 0.5);
   width: 350px;
+  height: 200px;
   margin:10px;
   padding: 10px;
-  border: 2px solid steelblue;
+  /* border: 2px solid #03283A; */
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -233,45 +423,116 @@ body{
 }
 
 
-/*------------------ INFORMACIÓN DE CONTACTO Y ENVIO ---------------------*/
+/**---- INFORMACIÓN DE CONTACTO Y ENVIO ----**/
 
 .contacto{
-  border-radius: 10px;
+  width: 100%;
+  padding: 30px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contacto .info-contacto{
-  padding: 2rem;
+  width: 100%;
+  padding: 20px;
   background: #03283A;
-  width: 90%;
-  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* gap: 2rem; */
   border-radius: 10px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
 }
 
-.contacto .formulario{
+.contacto .info-contacto .ciudad-movil{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center; 
+  align-items:center;
+
+}
+
+.contacto .info-contacto .ciudad-movil .icon-contacto{
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+  background: #075D88;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.contacto .info-contacto .ciudad-movil .icon-contacto span{
+  font-size: 25px;
+}
+
+.contacto .info-contacto .ciudad-movil h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contacto .info-contacto .ciudad-movil hr{
+  width: 80%;
+}
+
+.contacto .info-contacto .ciudad-movil hr:nth-child(1){
+  margin-bottom:20px;
+}
+.contacto .info-contacto .ciudad-movil .whats-tele{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+/* .contacto .info-contacto .ciudad-movil .whats-tele .icon-contacto span{
+  font-size: 25px;
+} */
+
+
+
+.contacto .info-contacto .formulario{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contacto .info-contacto .myForm {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+  }
+.contacto .info-contacto .myForm .icon-email{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #072D88; */
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  margin-bottom: 10px;
+}
+
+.contacto .info-contacto .myForm .icon-email span{
+  background-color: #075D88;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.contacto .info-contacto .myForm .correo-titulo{
+  margin-bottom: 10px;
 }
 
 
-.contacto .formulario div form{
+/* .contacto .formulario div form{
   
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
 }
 
 
@@ -281,9 +542,7 @@ body{
 
 .contacto .formulario div form div input{
 
-  margin-top: 1rem;
-  border: none;
-  border-radius: 5px;
+
 }
 
 
@@ -299,18 +558,69 @@ body{
   padding: 5px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: pointer; */
 
+/* } */
+
+.contacto .info-contacto  .myForm div label{
+  display:block;
+  margin: 10px 0px;
 }
+
+  .contacto .info-contacto .myForm div input{
+    display: block;
+    border: none;
+    padding-left: 16px;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  }
+
+
+  .contacto .info-contacto .myForm div textarea{
+    display:block;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .contacto .info-contacto .myForm .boton button{
+    display: block;
+    margin-top: 20px;
+    width: 200px;
+    padding: 5px 10px;
+    background: #075D88;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  }
+
+
 /*------------ MODIFICACIONES RESPONSIVE ----------------------*/
 
-@media screen and (max-width: 1024px){
-  /* .header-img .letrero{
-    font-size: 3vmin;
-    margin: 10px;
-    text-align: center;
-  } */
+@media screen and (max-width: 1078px){
   
+  .nav{
+      padding: 5px;
+  }
+
+  .nav .elementoNav a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav .elementoNav a div{
+    width: 32px;
+    height: 32px;
+    background: #ECF8FE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+  }
+
 }
 
 @media screen and (max-width: 890px){
@@ -326,9 +636,22 @@ body{
     padding-top: 10px;
     font-size: 12px;
   }
+
+
+
+
 }
 
-@media screen and (max-width: 580px) {
+
+@media screen and (max-width: 800px) {
+
+  nav .elementoNav a span{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
 
   nav .elementoNav a{
     padding: 15px;
@@ -371,15 +694,19 @@ body{
     font-size: 2vmin;
   }
 
-  /* .header-img .letrero{
-    font-size: 3vmin;
-    margin: 10px;
-    text-align: center;
-  } */
+  .contacto .info-contacto{
+    flex-direction: column;
+
+  }
+
+  .contacto .info-contacto .ciudad-movil .whats-tele{
+    justify-content:space-around;
+  }
+
 }
 
 
-@media screen and (max-width: 425px){
+@media screen and (max-width:560px){
 
   .nav{
     opacity: 0; 
@@ -408,9 +735,7 @@ body{
     background: none;
     border: 0;
     padding: 10px;
-
   }
-
 
   .nav .cerrar-menu i{
     border-radius: 60%;
@@ -458,8 +783,127 @@ body{
     border-radius: 50%;
   }
 
+
+  /**---- PERFIL-INFO - IMAGEN - CONTENEDOR ----**/
+
+  .experiencia-contenido{
+    flex-direction: column;
+  }
+  .experiencia-contenido .listas{
+    width: 80%;
+  }
+  .experiencia-contenido .estudios{
+    width: 80%;
+  }
+  .experiencia-contenido .estudios h3{
+    margin-top: 20px;
+  }
+
+  .perfil .perfil-info{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+  }
+
+  .perfil .perfil-info .perfil-img{
+    margin-bottom: 20px;
+    width: 50%;
+
+  }
+  .perfil .perfil-info .perfil-contenedor{
+    width: 90%;
+  }
+  .perfil .perfil-info .perfil-contenedor .perfil-letrero h1{
+    font-size: 16px;
+  }
+  .perfil .perfil-info .perfil-contenedor .perfil-letrero h2{
+    font-size: 20px;
+  }
+
+  
+
+  /**---- CONTACTO MENSAJE - UBICACION ----**/
+
+  .ciudad-movil{
+    width: 100%;
+  }
+
+  .ciudad-movil .whats-tele{
+
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .ciudad-movil .whats-tele .icon-contacto{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border-radius: 50%;
+    background: #179135;
+    /* display: flex; */
+  }
+
+  /**---- CONTACTO - FORMULARIO ----**/
+  
+  .contacto .info-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  /* .contacto .info-contacto .myForm {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+  } */
+
+  .contacto .info-contacto  .myForm div, .contacto .info-contacto  .myForm h3{
+    margin-bottom: 20px;
+  }
+  .contacto .info-contacto  .myForm .icon-email{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #075D88;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  } 
+
+  .contacto .info-contacto  .myForm div label{
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .contacto .info-contacto .myForm div input{
+    display: inline-block;
+    border: none;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .contacto .info-contacto .myForm div textarea{
+    display:inline-block; 
+    border: none;
+    border-radius: 8px;
+  }
+  .contacto .info-contacto .myForm .boton button{
+    
+    width: 160px ;
+    padding: 5px 10px;
+    background: #075D88;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  }
+
 }
-
-
-
 
