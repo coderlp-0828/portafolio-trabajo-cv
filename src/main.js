@@ -1,5 +1,5 @@
-import './normalize.css'
-import './style.css'
+import '../src/normalize.css'
+import '../src/style.css'
 
 
 /**** Boton responsive Navbar */
